@@ -7,7 +7,7 @@ import config
 html = Template(Path('content.html').read_text())
 
 email = EmailMessage()
-email['from'] = config.SENDER_EMAIL
+email['from'] = config.SENDER_NAME
 email['to'] = config.RECIPIENT_EMAIL
 email['subject'] = 'Email Subject'
 
