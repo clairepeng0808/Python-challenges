@@ -13,11 +13,6 @@ soup = BeautifulSoup(res.text, 'html.parser')
 # print(soup.title)
 # print(soup.find(id="score_23254587"))
 
-links = soup.select('.storylink')  # '.' stands for class
-print(links)
-subtext = soup.select('.subtext')
-# print(links[0].get('href'))
-
 
 def sort_stories_by_votes(hnlist):
     return sorted(hnlist, key=lambda k: k['votes'], reverse=True)
@@ -35,5 +30,9 @@ def create_custom_hn(links, subtext):
                 hn.append({'title': title, 'link': href, 'votes': points})
     return sort_stories_by_votes(hn)
 
+
+links = soup.select('.storylink')  # '.' stands for class
+subtext = soup.select('.subtext')
+# print(links[0].get('href'))
 
 pprint(create_custom_hn(links, subtext))
