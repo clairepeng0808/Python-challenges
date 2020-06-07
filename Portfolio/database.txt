@@ -1,0 +1,3 @@
+name, email, message
+chuchu, claire@machix.com, yay
+豬, zdimple0808@gmail.com, 豬愛妹chuchu,zdimple0808@gmail.com,aa
